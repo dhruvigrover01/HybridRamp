@@ -610,7 +610,7 @@ const Hero = () => {
 
           {/* Right Content - Spline 3D Design */}
           <div className="hidden lg:flex items-center justify-center h-full">
-            <Spline scene="https://prod.spline.design/BHhs-lIl6nlcjVKy/scene.splinecode" />
+            <SplineClientOnly scene="https://prod.spline.design/BHhs-lIl6nlcjVKy/scene.splinecode" />
           </div>
         </div>
       </div>
