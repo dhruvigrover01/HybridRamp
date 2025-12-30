@@ -2,26 +2,27 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Shield, Zap } from "lucide-react";
 import { Link } from "react-router-dom";
+import Spline from "@splinetool/react-spline";
 
 const Hero = () => {
-  // Generate falling coins
-  const fallingCoins = Array.from({ length: 12 }, (_, i) => ({
-    id: i,
-    x: 50 + Math.random() * 400,
-    delay: Math.random() * 5,
-    duration: 3 + Math.random() * 2,
-    size: 15 + Math.random() * 25,
-    rotation: Math.random() * 360,
-  }));
+  // // Generate falling coins
+  // const fallingCoins = Array.from({ length: 12 }, (_, i) => ({
+  //   id: i,
+  //   x: 50 + Math.random() * 400,
+  //   delay: Math.random() * 5,
+  //   duration: 3 + Math.random() * 2,
+  //   size: 15 + Math.random() * 25,
+  //   rotation: Math.random() * 360,
+  // }));
 
-  // Floating coins data
-  const floatingCoins = [
-    { x: 80, y: 100, size: 40, delay: 0 },
-    { x: 420, y: 80, size: 35, delay: 0.5 },
-    { x: 450, y: 200, size: 50, delay: 1 },
-    { x: 60, y: 300, size: 30, delay: 1.5 },
-    { x: 400, y: 320, size: 45, delay: 2 },
-  ];
+  // // Floating coins data
+  // const floatingCoins = [
+  //   { x: 80, y: 100, size: 40, delay: 0 },
+  //   { x: 420, y: 80, size: 35, delay: 0.5 },
+  //   { x: 450, y: 200, size: 50, delay: 1 },
+  //   { x: 60, y: 300, size: 30, delay: 1.5 },
+  //   { x: 400, y: 320, size: 45, delay: 2 },
+  // ];
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
@@ -108,7 +109,7 @@ const Hero = () => {
             </motion.div>
           </motion.div>
 
-          {/* Right Content - Fully Animated Crypto Illustration */}
+          /* {/* Right Content - Fully Animated Crypto Illustration */}
           <motion.div
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
@@ -605,7 +606,12 @@ const Hero = () => {
                 </motion.g>
               </svg>
             </div>
-          </motion.div>
+          </motion.div> */
+
+          {/* Right Content - Spline 3D Design */}
+          <div className="hidden lg:flex items-center justify-center h-full">
+            <Spline scene="https://prod.spline.design/BHhs-lIl6nlcjVKy/scene.splinecode" />
+          </div>
         </div>
       </div>
     </section>
