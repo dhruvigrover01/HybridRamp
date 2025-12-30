@@ -77,7 +77,7 @@ const Navbar = () => {
               <span className="text-primary-foreground font-bold text-lg">H</span>
             </div>
             <span className="font-heading font-bold text-xl text-foreground">
-              Hybrid<span className="text-primary">RampX</span>
+              Hybrid<span className="text-primary">Ramp</span>
             </span>
           </Link>
 
