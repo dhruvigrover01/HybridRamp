@@ -771,9 +771,25 @@ Risk & KYC Engine [R]
 
 ![HybridRamp DFD Level 0](assets/DFD-Level-0-HybridRamp.png)
 
+## Level 0 DFD – System Overview
+
+The **Level 0 Data Flow Diagram (Context Diagram)** represents HybridRamp as a **single logical system** interacting with external entities. The primary external entity is the **User**, who interacts with the platform through web or mobile applications. All user actions, such as viewing data or initiating transactions, are sent to the HybridRamp platform through a REST API.
+
+HybridRamp acts as an intermediary between the user and the **Blockchain Network**. It processes user requests, applies validation and business rules, and performs required **read and write operations** on the blockchain. The blockchain executes transactions, stores immutable records, and returns transaction status or confirmations to the platform.
+
+At this level, internal system details are abstracted. The diagram focuses on **data flow direction**, **system boundaries**, and **external dependencies**, emphasizing that users do not directly interact with the blockchain.
+
 ### Level 1 – Detailed
 
 ![HybridRamp DFD Level 1](assets/DFD-Level-1-HybridRamp.png)
+
+Level 1 DFD – Core System Processes
+
+The Level 1 Data Flow Diagram expands the internal structure of HybridRamp into key functional components. User interactions first pass through the User Interface (Frontend), where data is captured and results are displayed. The frontend communicates with the Application Logic (Backend), which handles request processing, validation, and transaction orchestration.
+
+User information is stored and retrieved from the User Data Database, while transaction-related data is managed using the Transaction Ledger and Transaction History data stores. When a transaction is initiated, the backend sends a request to the Blockchain Interaction layer, which executes smart contract calls and communicates with the blockchain network.
+
+Transaction outcomes and status updates are stored for auditing and tracking and are propagated back to the frontend for user visibility. This level illustrates detailed internal data flows and component responsibilities.
 
 ---
 ## Database Schema (High-Level)
