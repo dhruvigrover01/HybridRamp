@@ -493,6 +493,276 @@ Blockchain & Settlement Layer
 
 ![HybridRamp User Flow](assets/UserFlow-HybridRamp.png)
 
+HybridRamp Transaction Workflow
+
+HybridRamp implements a **comprehensive transaction workflow** with **built-in compliance and risk management**, ensuring security, regulatory adherence, and transparent execution.
+
+---
+
+## Workflow Overview
+
+All user actions follow a controlled pipeline with **mandatory authentication, risk evaluation, and on-chain settlement**.
+
+---
+
+## Flow Steps
+
+---
+
+## 1. User Authentication `[U]`
+
+**Purpose:** Establish user identity and session
+
+- User initiates interaction via web or mobile interface
+    
+- Connects through a supported Web3 wallet:
+    
+    - MetaMask
+        
+    - WalletConnect
+        
+    - Other EVM-compatible wallets
+        
+
+> [!note]  
+> No transaction can begin without authenticated user context.
+
+---
+
+## 2. Wallet Connection `[W]`
+
+**Purpose:** Verify wallet ownership
+
+- Secure connection established with the user's wallet
+    
+- Wallet signature verification
+    
+- Ownership and session binding confirmed
+    
+
+> [!important]  
+> Prevents spoofed or unauthorized wallet interactions.
+
+---
+
+## 3. Action Selection `[A]`
+
+**Purpose:** Define user intent
+
+User selects one of the supported operations:
+
+- **Buy Crypto**
+    
+    - Direct purchase of digital assets
+        
+- **Vault / Index / Borrow**
+    
+    - Staking and vault deposits
+        
+    - Index fund investment
+        
+    - Collateralized lending and borrowing
+        
+
+---
+
+## 4. Risk & KYC Engine `[R]`
+
+**Purpose:** Compliance and risk enforcement (Primary Gateway)
+
+- All transactions pass through mandatory checks
+    
+- Evaluates:
+    
+    - User identity
+        
+    - Transaction history and patterns
+        
+    - Dynamic risk score
+        
+
+### Possible Outcomes
+
+- **Approved**
+    
+    - Transaction proceeds to execution
+        
+- **KYC Required**
+    
+    - User must complete or upgrade identity verification
+        
+- **Blocked**
+    
+    - Transaction rejected due to risk or compliance violations
+        
+
+> [!warning]  
+> No execution occurs unless this layer explicitly approves the transaction.
+
+---
+
+## Conditional Paths
+
+---
+
+### Green Path — Approved
+
+- Transaction proceeds directly to **Execution Engine `[E]`**
+    
+
+---
+
+### Yellow Path — KYC Required
+
+- User redirected to **KYC Upgrade Process `[K]`**
+    
+- Transaction resumes only after successful verification
+    
+
+---
+
+### Red Path — Blocked
+
+- Transaction terminates at **Transaction Blocked State `[B]`**
+    
+- No further processing occurs
+    
+
+---
+
+## 5. Execution Engine `[E]`
+
+**Purpose:** Business logic and transaction preparation
+
+- Processes approved transactions
+    
+- Handles:
+    
+    - Order routing
+        
+    - Order matching
+        
+    - Execution optimization
+        
+- Prepares parameters for blockchain submission
+    
+
+> [!tip]  
+> This layer is blockchain-agnostic and focused on financial logic.
+
+---
+
+## 6. Smart Contracts `[S]`
+
+**Purpose:** On-chain instruction translation
+
+- Converts execution instructions into smart contract calls
+    
+- Manages:
+    
+    - Gas optimization
+        
+    - Transaction signing
+        
+- Interacts with:
+    
+    - Vault contracts
+        
+    - Lending contracts
+        
+    - Trading contracts
+        
+
+---
+
+## 7. Blockchain Network `[BC]`
+
+**Purpose:** Final settlement and immutability
+
+- Executes transactions on supported networks:
+    
+    - Ethereum
+        
+    - Polygon
+        
+    - Arbitrum
+        
+- Records transactions immutably on-chain
+    
+- Generates a **Transaction Hash `[T]`** for tracking
+    
+
+> [!success]  
+> On-chain settlement guarantees transparency and finality.
+
+---
+
+## Feedback Loop
+
+**Purpose:** User confirmation and system consistency
+
+- Transaction hash returned to the user
+    
+- Status updates propagate back through all layers
+    
+- User interface reflects final transaction state
+    
+
+---
+
+## Security Features
+
+---
+
+### Multi-Layer Validation
+
+- Validation at authentication, wallet, risk, execution, and blockchain layers
+    
+
+### Compliance-First Design
+
+- No transaction bypasses the Risk & KYC Engine
+    
+
+### Transparent Outcomes
+
+- Clear communication for approved, pending, or blocked states
+    
+
+### Audit Trail
+
+- Complete transaction history maintained:
+    
+    - On-chain for transparency
+        
+    - Off-chain for compliance and analytics
+        
+
+---
+
+## High-Level Flow Summary
+
+```text
+User [U]
+  ↓
+Wallet Connection [W]
+  ↓
+Action Selection [A]
+  ↓
+Risk & KYC Engine [R]
+  ├─ Approved → Execution Engine [E]
+  ├─ KYC Required → KYC Upgrade [K]
+  └─ Blocked → Transaction Blocked [B]
+          ↓
+     Smart Contracts [S]
+          ↓
+   Blockchain Network [BC]
+          ↓
+   Transaction Hash [T]
+          ↓
+      User Feedback
+```
+
 ---
 
 ##  Data Flow (DFDs)
