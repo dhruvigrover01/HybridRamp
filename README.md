@@ -292,6 +292,51 @@ Transaction limits and feature access depend on tier.
 
 ![HybridRamp High-Level Architecture](assets/HybridRamp-System-Architecture.png)
 
+
+HybridRamp follows a layered architecture pattern with six distinct layers:
+
+1. Presentation Layer
+User-facing interfaces and wallet connectivity:
+
+Multi-platform web and mobile applications
+Web3 wallet integration (MetaMask, WalletConnect, etc.)
+Real-time trading dashboard and analytics UI
+
+2. Backend API Layer
+RESTful API services with comprehensive authentication:
+
+OpenAPI/Swagger documented endpoints
+JWT-based authentication and authorization
+Rate limiting and request validation
+
+3. Risk & Policy Engine
+Compliance-first design with automated risk management:
+
+KYC/AML integration and identity verification
+Multi-factor risk scoring algorithms
+Configurable transaction approval workflows
+
+4. Execution Layer
+Core financial operations engines:
+
+Trade Execution Engine: Order matching and execution
+Index Allocation Engine: Automated portfolio rebalancing
+Lending & Collateral Engine: Loan origination and management
+
+5. Blockchain Integration Layer
+Middleware connecting traditional backend to blockchain:
+
+Smart contract interaction adapters
+ethers.js integration for Ethereum compatibility
+Comprehensive audit logging and event tracking
+
+6. Blockchain & Settlement Layer
+On-chain infrastructure for final settlement:
+
+Non-custodial smart contract vaults
+Collateral management contracts
+Multi-chain support (Ethereum, Polygon, Arbitrum)
+
 ---
 
 
