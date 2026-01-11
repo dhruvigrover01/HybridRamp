@@ -23,7 +23,8 @@
 10. Entity Relationship Diagram  
 11. Technical Workflows  
 12. Production-Ready vs Simulated Components
-13. Improvements for Round 2  
+13. Improvements for Round 2
+14. [Scalability & Fault Tolerance](hybrid_ramp_scaling_architecture_readme.md)
 
 
 ---
