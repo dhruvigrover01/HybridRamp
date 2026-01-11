@@ -1,5 +1,5 @@
 # HybridRamp
-**HybridRamp** is a **FinTech platform with Web3 settlement** that acts as an **intermediary execution and custody layer** for user crypto transactions. It enforces risk controls, routes orders intelligently, offers index-style exposure and crypto-backed lending, and settles ownership on blockchain.
+*HybridRamp* is a *FinTech platform with Web3 settlement* that acts as an *intermediary execution and custody layer* for user crypto transactions. It enforces risk controls, routes orders intelligently, offers index-style exposure and crypto-backed lending, and settles ownership on blockchain.
 
 ### Target Users
 
@@ -78,50 +78,50 @@ India has 22M retail investors (NSE/BSE), but < 1M trade crypto because:
 
 ### HybridRamp Model
 
-HybridRamp is an **India-first crypto financial platform** designed to treat crypto like a **regulated investment and asset class**, not a speculative trading tool.
+HybridRamp is an *India-first crypto financial platform* designed to treat crypto like a *regulated investment and asset class*, not a speculative trading tool.
 
-Instead of pushing complexity to users, HybridRamp **absorbs execution, custody, risk, and compliance complexity at the system level**, similar to how Indian stock brokers and banks operate.
+Instead of pushing complexity to users, HybridRamp *absorbs execution, custody, risk, and compliance complexity at the system level*, similar to how Indian stock brokers and banks operate.
 
 
 ### Approach
 
-1. **Simplified Onboarding**
+1. *Simplified Onboarding*
 
 - INR-first guided flow (buy, invest, borrow)
 - Automatic KYC tiering and transaction limits
 - No requirement for crypto-native knowledge
 
-3. **Smart Execution Engine**
+3. *Smart Execution Engine*
 
 - Small transactions execute instantly
 - Large transactions are automatically split and routed
 - Simulated multi-venue price comparison minimizes slippage
 
-5. **On-Chain Settlement**
+5. *On-Chain Settlement*
 
 - Real ERC-20 smart contracts deployed on testnet
 - Token minting and transfers occur on-chain
 - Every transaction is verifiable via blockchain explorer
 
-7. **Secure Custodial Vault**
+7. *Secure Custodial Vault*
 
 - Platform-controlled vault for safe asset storage
 - Backend tracks user ownership
 - Policy-based withdrawals with simulated multi-signature approval
 
-9. **Crypto Index / Basket Investment**
+9. *Crypto Index / Basket Investment*
 
 - Nifty50-like crypto baskets with fixed allocation
 - NAV calculated transparently using simulated prices
 - Enables diversified crypto exposure without coin selection
 
-11. **Crypto-Backed Lending**
+11. *Crypto-Backed Lending*
 
 - Users borrow fiat against locked crypto collateral
 - Loan-to-Value (LTV) enforced
 - Collateral locking and liquidation logic simulated on-chain
 
-13. **Compliance-First Design**
+13. *Compliance-First Design*
 
 - Tier-based KYC aligned with Indian practices
 - Automated crypto tax and TDS estimation logic
@@ -129,7 +129,7 @@ Instead of pushing complexity to users, HybridRamp **absorbs execution, custody,
 
 #### Innovation Highlights
 
-| **Aspect**    | **Standard Crypto Platforms** | **HybridRamp Innovation**            |
+| *Aspect*    | *Standard Crypto Platforms* | *HybridRamp Innovation*            |
 | ------------- | ----------------------------- | ------------------------------------ |
 | Onboarding    | Crypto-native, complex        | INR-first, guided, tier-based        |
 | Execution     | Manual market orders          | Smart routing with slippage control  |
@@ -143,6 +143,35 @@ Instead of pushing complexity to users, HybridRamp **absorbs execution, custody,
 
 --- 
 
+## Tech Stack
+
+### Frontend
+- *Framework:* React 19 with TypeScript
+- *Build Tool:* Vite
+- *Styling:* Tailwind CSS
+- *UI Components:* Shadcn UI
+- *Web3 Integration:* ethers.js, MetaMask
+
+### Backend
+- *Runtime:* Node.js (v18+)
+- *Framework:* Express.js
+- *Language:* TypeScript & JavaScript
+- *Database:* In-memory (prototype) → PostgreSQL (production)
+- *API Documentation:* OpenAPI/Swagger
+
+### Blockchain
+- *Smart Contracts:* Solidity (ERC-20 standard)
+- *Contract Framework:* OpenZeppelin
+- *Development Tool:* Hardhat
+- *Testnet:* Sepolia (Ethereum testnet)
+- *RPC Provider:* Infura
+- *Interaction Library:* ethers.js v5
+
+### Package Manager
+- *Primary:* npm
+- *Lock file:* bun.lockb (optional Bun support)
+
+---
 
 ## Key Features
 
@@ -155,7 +184,7 @@ Instead of pushing complexity to users, HybridRamp **absorbs execution, custody,
 - Network validation (testnet)
     
 
-**Value:** Simple, secure onboarding without traditional credentials.
+*Value:* Simple, secure onboarding without traditional credentials.
 
 ---
 
@@ -168,23 +197,23 @@ Instead of pushing complexity to users, HybridRamp **absorbs execution, custody,
 - Triggers real blockchain settlement
     
 
-**Value:** Low-friction crypto entry for non-technical users.
+*Value:* Low-friction crypto entry for non-technical users.
 
 ---
 
 ## 3. Tier-Based KYC System (Mocked but Logical)
 
-- **Tier 1:** Email / phone (default)
+- *Tier 1:* Email / phone (default)
 - verify email and phone via otp
     
-- **Tier 2:** ID upload (mock)
+- *Tier 2:* ID upload (mock)
     
-- **Tier 3:** Full KYC (mock)
+- *Tier 3:* Full KYC (mock)
     
 
 Transaction limits and feature access depend on tier.
 
-**Value:** Compliance-aware design inspired by real FinTech platforms.
+*Value:* Compliance-aware design inspired by real FinTech platforms.
 
 ---
 
@@ -207,7 +236,7 @@ Transaction limits and feature access depend on tier.
     - Blocked
         
 
-**Value:** Prevents fraud and unsafe transactions through intelligent checks.
+*Value:* Prevents fraud and unsafe transactions through intelligent checks.
 
 ---
 
@@ -224,7 +253,7 @@ Transaction limits and feature access depend on tier.
 - Minimizes slippage for large orders
     
 
-**Value:** Institutional-grade execution logic in a consumer product.
+*Value:* Institutional-grade execution logic in a consumer product.
 
 ---
 
@@ -237,7 +266,7 @@ Transaction limits and feature access depend on tier.
 - Transactions verifiable on blockchain explorer
     
 
-**Value:** Transparency and trust through blockchain settlement.
+*Value:* Transparency and trust through blockchain settlement.
 
 ---
 
@@ -252,7 +281,7 @@ Transaction limits and feature access depend on tier.
 - Withdrawal requires additional checks / approval (simulated multi-sig)
     
 
-**Value:** Safer storage option for large balances (BitGo-style custody).
+*Value:* Safer storage option for large balances (BitGo-style custody).
 
 --- 
 
@@ -267,7 +296,7 @@ Transaction limits and feature access depend on tier.
 - NAV calculated using simulated prices
     
 
-**Value:** Simplified, risk-managed crypto investing for beginners.
+*Value:* Simplified, risk-managed crypto investing for beginners.
 
 ---
 
@@ -282,7 +311,7 @@ Transaction limits and feature access depend on tier.
 - Liquidation logic simulated
     
 
-**Value:** Demonstrates DeFi credit mechanics with FinTech controls.
+*Value:* Demonstrates DeFi credit mechanics with FinTech controls.
 
 ---
 
@@ -295,13 +324,13 @@ Transaction limits and feature access depend on tier.
 
 # HybridRamp Architecture Overview
 
-HybridRamp follows a **layered architecture pattern** with **six distinct layers**, each responsible for a specific concern in the system.
+HybridRamp follows a *layered architecture pattern* with *six distinct layers*, each responsible for a specific concern in the system.
 
 ---
 
 ## 1. Presentation Layer
 
-**Purpose:** User-facing interfaces and wallet connectivity
+*Purpose:* User-facing interfaces and wallet connectivity
 
 - Multi-platform web and mobile applications
     
@@ -325,7 +354,7 @@ HybridRamp follows a **layered architecture pattern** with **six distinct layers
 
 ## 2. Backend API Layer
 
-**Purpose:** Secure communication and orchestration layer
+*Purpose:* Secure communication and orchestration layer
 
 - RESTful API services
     
@@ -345,7 +374,7 @@ HybridRamp follows a **layered architecture pattern** with **six distinct layers
 
 ## 3. Risk & Policy Engine
 
-**Purpose:** Compliance-first automated risk management
+*Purpose:* Compliance-first automated risk management
 
 - KYC / AML integration
     
@@ -365,23 +394,23 @@ HybridRamp follows a **layered architecture pattern** with **six distinct layers
 
 ## 4. Execution Layer
 
-**Purpose:** Core financial operations and business logic
+*Purpose:* Core financial operations and business logic
 
 ### Components
 
-- **Trade Execution Engine**
+- *Trade Execution Engine*
     
     - Order matching
         
     - Trade execution
         
-- **Index Allocation Engine**
+- *Index Allocation Engine*
     
     - Automated portfolio rebalancing
         
     - Index weight calculations
         
-- **Lending & Collateral Engine**
+- *Lending & Collateral Engine*
     
     - Loan origination
         
@@ -397,7 +426,7 @@ HybridRamp follows a **layered architecture pattern** with **six distinct layers
 
 ## 5. Blockchain Integration Layer
 
-**Purpose:** Bridge between backend services and blockchain networks
+*Purpose:* Bridge between backend services and blockchain networks
 
 - Smart contract interaction adapters
     
@@ -417,7 +446,7 @@ HybridRamp follows a **layered architecture pattern** with **six distinct layers
 
 ## 6. Blockchain & Settlement Layer
 
-**Purpose:** On-chain settlement and custody
+*Purpose:* On-chain settlement and custody
 
 - Non-custodial smart contract vaults
     
@@ -511,7 +540,7 @@ User
 
 Represents a platform user identified by wallet address.
 
-**Attributes**
+*Attributes*
 
 - `user_id` – internal identifier
     
@@ -530,7 +559,7 @@ Represents a platform user identified by wallet address.
 
 Tracks verification tier and compliance status.
 
-**Attributes**
+*Attributes*
 
 - `kyc_id`
     
@@ -543,7 +572,7 @@ Tracks verification tier and compliance status.
 - `updated_at`
     
 
-Used by the **Risk & Policy Engine** to enforce limits and feature access.  
+Used by the *Risk & Policy Engine* to enforce limits and feature access.  
 (KYC is mocked in the prototype.)
 
 ---
@@ -552,7 +581,7 @@ Used by the **Risk & Policy Engine** to enforce limits and feature access.
 
 Represents any user-initiated financial action.
 
-**Attributes**
+*Attributes*
 
 - `transaction_id`
     
@@ -573,7 +602,7 @@ Represents any user-initiated financial action.
 - `created_at`
     
 
-Transactions are **immutable** once completed and serve as audit records.
+Transactions are *immutable* once completed and serve as audit records.
 
 ---
 
@@ -581,7 +610,7 @@ Transactions are **immutable** once completed and serve as audit records.
 
 Tracks custodial balances stored in the platform vault.
 
-**Attributes**
+*Attributes*
 
 - `vault_id`
     
@@ -596,7 +625,7 @@ Tracks custodial balances stored in the platform vault.
 - `updated_at`
     
 
-Actual custody is enforced **on-chain**.  
+Actual custody is enforced *on-chain*.  
 The database tracks ownership and withdrawal state.
 
 ---
@@ -605,7 +634,7 @@ The database tracks ownership and withdrawal state.
 
 Represents user exposure to a crypto market index (NIFTY-style).
 
-**Attributes**
+*Attributes*
 
 - `index_position_id`
     
@@ -620,7 +649,7 @@ Represents user exposure to a crypto market index (NIFTY-style).
 - `created_at`
     
 
-Index allocation is **passive**, with NAV calculated using simulated prices.
+Index allocation is *passive*, with NAV calculated using simulated prices.
 
 ---
 
@@ -628,7 +657,7 @@ Index allocation is **passive**, with NAV calculated using simulated prices.
 
 Tracks crypto-backed lending positions.
 
-**Attributes**
+*Attributes*
 
 - `loan_id`
     
@@ -649,7 +678,7 @@ Tracks crypto-backed lending positions.
 - `created_at`
     
 
-Collateral locking is enforced **on-chain**, while loan health is monitored off-chain.
+Collateral locking is enforced *on-chain*, while loan health is monitored off-chain.
 
 ---
 
@@ -776,9 +805,9 @@ Contracts implement:
 ## Improvements for Round 2
 
 
-**Objective**
+*Objective*
 
-Transition HybridRamp from a **proof-of-concept prototype** to a **production-ready, scalable, and India-compliant crypto financial platform**.
+Transition HybridRamp from a *proof-of-concept prototype* to a *production-ready, scalable, and India-compliant crypto financial platform*.
 
 Round 2 focuses on:
 
@@ -788,80 +817,80 @@ Round 2 focuses on:
 - Advanced product maturity
 - Enterprise-grade security
 
-**A. Performance & Scalability Enhancements**
+*A. Performance & Scalability Enhancements*
 
 |   |   |   |   |
 |---|---|---|---|
-|**Metric**|**Round 1**|**Round 2**|**Improvement**|
+|*Metric*|*Round 1*|*Round 2*|*Improvement*|
 |Quote Latency|~500 ms (simulated)|~50 ms (cached)|~90% faster|
 |Dashboard Load|~1.2 s|~200 ms|~80% faster|
 |Concurrent Users|~100|10,000+|100× scale|
 |Blockchain Throughput|Single RPC|Batched RPC|Higher efficiency|
 
-**Implementation**
+*Implementation*
 
 - Redis caching for venue quotes (short TTL)
 - Batched blockchain RPC calls
 - CDN for static frontend assets
 - Kubernetes-based horizontal scaling
 
-**B. Live Integrations (Replacing Mocked Components)**
+*B. Live Integrations (Replacing Mocked Components)*
 
 |                  |             |                                                                           |
 | ---------------- | ----------- | ------------------------------------------------------------------------- |
-| **Component**    | **Round 1** | **Round 2**                                                               |
+| *Component*    | *Round 1* | *Round 2*                                                               |
 | Fiat On-Ramp     | Mocked      | Razorpay UPI integration                                                  |
 | KYC Verification | Mocked      | Aadhaar / PAN eKYC                                                        |
 | Market Data      | Simulated   | Live market data from major centralized exchanges (e.g., Binance, WazirX) |
 
-**Outcome**
+*Outcome*
 
 - Real INR deposits and withdrawals
 - Real user verification
 - Real-time market pricing
 
-**C. India-First Compliance Improvements**
+*C. India-First Compliance Improvements*
 
 |   |   |
 |---|---|
-|**Area**|**Enhancement**|
+|*Area*|*Enhancement*|
 |Crypto Tax|Automated 30% gain calculation|
 |TDS|Auto 1% deduction on eligible withdrawals|
 |Audit Trails|Transaction-wise immutable logs|
 |Reporting|Exportable P&L and tax statements|
 
-**Impact**
+*Impact*
 
 - Regulatory readiness
 - Reduced compliance burden for users
 - Increased trust for Indian retail investors
 
-**D. Advanced Product Capabilities**
+*D. Advanced Product Capabilities*
 
-|**Feature**|**Description**|
+|*Feature*|*Description*|
 |---|---|
 |AI Investment Guidance|Model-driven buy/sell suggestions|
 |Auto-DCA|Scheduled recurring investments|
 |Portfolio Alerts|Price, rebalance, and risk notifications|
 |Social Investing|Copy portfolios of top-performing users|
 
-**E. Investment & Lending Enhancements**
+*E. Investment & Lending Enhancements*
 
-|**Area**|**Round 2 Upgrade**|
+|*Area*|*Round 2 Upgrade*|
 |---|---|
 |Index Funds|Automatic periodic rebalancing|
 |Lending|Dynamic interest rates based on pool demand|
 |Risk Monitoring|Continuous loan health factor checks|
 
-**Result**
+*Result*
 
 - Improved capital efficiency
 - Passive income-like experience
 - Reduced liquidation risk
 
-**F. Security & Trust Upgrades**
+*F. Security & Trust Upgrades*
 
-|**Layer**|**Round 2 Enhancement**|
+|*Layer*|*Round 2 Enhancement*|
 |---|---|
 |Smart Contracts|Third-party security audit|
 |APIs|OAuth2, rate limiting, WAF|
@@ -869,88 +898,74 @@ Round 2 focuses on:
 |Testing|External penetration testing|
 |Risk Coverage|Cyber and custody insurance|
 
-**G. Platform Expansion**
+*G. Platform Expansion*
 
-|**Area**|**Upgrade**|
+|*Area*|*Upgrade*|
 |---|---|
 |Mobile Access|Native Android & iOS apps|
 |Notifications|Push alerts (Firebase)|
 |Infrastructure|Multi-region deployment|
 |Availability|99.99% uptime target|
 
+## Blockchain Integration
 
-**Project Setup & Run Instructions**
+### On-Chain Settlement (REAL ✓)
+HybridRamp now includes **real on-chain settlement** on the Sepolia testnet.
 
-- **Prerequisites:**
+#### Deployment Status
+- **Contract Address:** See `blockchain/DEPLOYMENT.md`
+- **Network:** Sepolia (Chain ID: 11155111)
+- **Token:** HybridToken (HYBRID)
+- **Standard:** ERC-20 (OpenZeppelin)
+- **Initial Supply:** 1,000,000 HYBRID tokens
 
-- Node.js (v18+ recommended) and npm installed.
-- Recommended tools: a terminal (PowerShell or Windows Terminal) and a modern browser (Chrome/Edge/Firefox).
-- Optional: yarn, pnpm or bun if you prefer (project contains bun.lockb).
+#### Smart Contracts
+- `blockchain/contracts/HybridToken.sol` – ERC-20 token contract
+- Deployed at: `blockchain/DEPLOYMENT.md`
+- Verifiable on Etherscan: https://sepolia.etherscan.io/token/[CONTRACT_ADDRESS]
 
-- **Install dependencies (from project root):**  
-    Open PowerShell and run:
+#### How It Works
+1. **User buys crypto** → Backend risk engine approves transaction
+2. **Execution layer routes order** → Smart contract executes token transfer
+3. **Settlement is final** → Tokens transferred on Sepolia blockchain
+4. **Verifiable proof** → Every transaction has an Etherscan link
 
-·       cd d:\crypto\hybrid-ramp
+#### Testing On-Chain Features
+``bash
+# Deploy contract to Sepolia
+cd blockchain
+npx hardhat run scripts/deploy.js --network sepolia
 
-·       npm install
+# Run tests (mint & transfer)
+npx hardhat run scripts/test-functions.js --network sepolia
 
-- **Install server dependencies (optional if you ran root install, but safe):**
 
-·       cd d:\crypto\hybrid-ramp\server
+## Project Setup & Run Instructions
 
-·       npm install
+### Prerequisites
+- **Node.js** v18+ with npm
+- **MetaMask** browser extension (for Web3 testing)
+- **Hardhat** (installed with blockchain/ dependencies)
+- **Optional:** Infura account for Sepolia RPC (free tier)
 
-- **Start both frontend and backend (recommended):**
+### Installation
 
-·       cd d:\crypto\hybrid-ramp
+#### 1. Install Frontend & Backend Dependencies
+``bash
+cd HybridRamp  # project root
 
-·       npm run dev
+# Install root dependencies (includes Hardhat)
+npm install
 
-This runs the Vite frontend and the Express backend concurrently.
+# Install server dependencies (Express backend)
+cd server
+npm install
+cd ..
 
-- **Start backend only (dev auto-reload):**
 
-·       cd d:\crypto\hybrid-ramp\server
+*Application Flow Explanation*
 
-·       npm run dev
-
-- **Start frontend only:**
-
-·       cd d:\crypto\hybrid-ramp
-
-·       npm run dev:frontend
-
-- **Where to open in browser:**
-
-- Frontend (Vite default): http://localhost:5173 (if Vite chooses another port, check terminal output).
-- Backend (Express): http://localhost:4000 (server port is defined in server/index.js).
-- Quick health check: http://localhost:4000/api/health
-
-**First-Time User Guide (After Project Opens)**
-
-- **What the user sees first:**
-
-- The app opens to the public landing page (hero + navigation). Expect a top Navbar, hero/feature sections and links to Sign in / Get started.
-
-- **Should the user sign up or log in first?**
-
-- For the prototype, proceed to Sign In / Auth to access the Dashboard and wallet features. The app uses a demo OTP flow and simulated KYC for local testing.
-
-- **How to log in (demo OTP flow):**
-
-1. Click Sign In or Get started on the landing page.
-
-2. Provide an email or phone (the UI sends an OTP to the backend).
-
-- **Initial actions after login:**
-
-- Review Dashboard overview (portfolio, quick actions).
-- Try a simulated Quote or Swap via the buy/sell flows.
-- If testing KYC flows, upload files via the KYC screen; uploads are stored in [server/uploads](vscode-file://vscode-app/c:/Users/DELL/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/code/electron-browser/workbench/workbench.html) and reflected in the in-memory user record.
-
-**Application Flow Explanation**
-
-- **High-level flow (step-by-step):**
+- *High-level flow (step-by-step):*
 
 1. Landing page → user navigates to Sign In / Auth.
 2. Auth (OTP) → user is verified and redirected to Dashboard.
@@ -959,33 +974,33 @@ This runs the Vite frontend and the Express backend concurrently.
 5. KYC flow → user uploads documents via /api/upload-kyc; server updates in-memory KYC tier.
 6. Transactions & history → Transactions page lists simulated txs from the in-memory DB ([/api/txs](vscode-file://vscode-app/c:/Users/DELL/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/code/electron-browser/workbench/workbench.html)).
 
-- **What each major screen/module does:**
+- *What each major screen/module does:*
 
-- **Landing / Index:** marketing/intro and navigation.
-- **Auth:** OTP-based sign-in and KYC prompts.
-- **Dashboard:** portfolio overview, quick buy/sell actions and practice mode.
-- **Wallet:** connect/manage wallet interactions (local simulation).
-- **Transactions:** shows the simulated transaction history from the backend.
-- **Settings:** adjust preferences, theme, and mock accounts.
-- **Safety / KYC screens:** upload documents, view KYC tier and compliance prompts.
+- *Landing / Index:* marketing/intro and navigation.
+- *Auth:* OTP-based sign-in and KYC prompts.
+- *Dashboard:* portfolio overview, quick buy/sell actions and practice mode.
+- *Wallet:* connect/manage wallet interactions (local simulation).
+- *Transactions:* shows the simulated transaction history from the backend.
+- *Settings:* adjust preferences, theme, and mock accounts.
+- *Safety / KYC screens:* upload documents, view KYC tier and compliance prompts.
 
-- **How users move between features:**
+- *How users move between features:*
 
 - Use the Navbar to jump to Dashboard, [Wallet](vscode-file://vscode-app/c:/Users/DELL/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/code/electron-browser/workbench/workbench.html), Transactions, Settings, or Safety/KYC screens. Buttons on cards (e.g., Buy, Send, Practice) open corresponding modals. The flow is modal-driven for trades.
 
-**Important Notes**
+*Important Notes*
 
-- **Common mistakes to avoid:**
+- *Common mistakes to avoid:*
 
 - Forgetting to run npm install in the root (and server if needed) before npm run dev.
 - Running with [NODE_ENV=production](vscode-file://vscode-app/c:/Users/DELL/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/code/electron-browser/workbench/workbench.html) locally hides the debug OTP endpoint.
 - Expect changes to server to require a restart if not running nodemon via npm run dev in server.
 
-- **Required configurations (only for on-chain testing):**
+- *Required configurations (only for on-chain testing):*
 
 - To enable real on-chain settlement set these env vars for the backend: [RELAYER_PRIVATE_KEY](vscode-file://vscode-app/c:/Users/DELL/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/code/electron-browser/workbench/workbench.html), [RPC_URL](vscode-file://vscode-app/c:/Users/DELL/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/code/electron-browser/workbench/workbench.html), [ERC20_ABI](vscode-file://vscode-app/c:/Users/DELL/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/code/electron-browser/workbench/workbench.html) (JSON string). Without them, transactions are simulated. See server/index.js.
 
-- **Limitations of the prototype:**
+- *Limitations of the prototype:*
 
 - Backend uses an in-memory DB ([DB](vscode-file://vscode-app/c:/Users/DELL/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/code/electron-browser/workbench/workbench.html) object) — no persistence across restarts.
 - OTP is simulated and visible via a dev endpoint. Not safe for production.
@@ -993,3 +1008,30 @@ This runs the Vite frontend and the Express backend concurrently.
 - The front-end is served by Vite dev server (not production optimized).
 - Security, rate limiting, and real KYC validations are intentionally omitted for demo purposes.
 
+## Deployment & Verification
+
+### Sepolia Testnet Deployment
+
+**Contract Deployment Log:**
+See `blockchain/DEPLOYMENT.md` for:
+- Contract address
+- Deployment transaction hash
+- Sample mint and transfer transaction hashes
+- Etherscan links
+
+**To verify contract on Sepolia:**
+1. Go to: https://sepolia.etherscan.io/
+2. Search for contract address
+3. View all transactions, contract code, events
+4. Verify on Etherscan if needed (requires flattened contract)
+
+**Contract Code:**
+- Main contract: `blockchain/contracts/HybridToken.sol`
+- Built with OpenZeppelin ERC-20
+- Minting and burning capabilities included
+- Ownable access controls
+
+### Blockchain Explorer Links
+- **Sepolia Etherscan:** https://sepolia.etherscan.io
+- **View HybridToken:** https://sepolia.etherscan.io/token/[CONTRACT_ADDRESS]
+- **Sepolia Faucet (free test ETH):** https://sepoliafaucet.com
