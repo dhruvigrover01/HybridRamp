@@ -293,49 +293,168 @@ Transaction limits and feature access depend on tier.
 ![HybridRamp High-Level Architecture](assets/HybridRamp-System-Architecture.png)
 
 
-HybridRamp follows a layered architecture pattern with six distinct layers:
+# HybridRamp Architecture Overview
 
-1. Presentation Layer
-User-facing interfaces and wallet connectivity:
+HybridRamp follows a **layered architecture pattern** with **six distinct layers**, each responsible for a specific concern in the system.
 
-Multi-platform web and mobile applications
-Web3 wallet integration (MetaMask, WalletConnect, etc.)
-Real-time trading dashboard and analytics UI
+---
 
-2. Backend API Layer
-RESTful API services with comprehensive authentication:
+## 1. Presentation Layer
 
-OpenAPI/Swagger documented endpoints
-JWT-based authentication and authorization
-Rate limiting and request validation
+**Purpose:** User-facing interfaces and wallet connectivity
 
-3. Risk & Policy Engine
-Compliance-first design with automated risk management:
+- Multi-platform web and mobile applications
+    
+- Web3 wallet integration
+    
+    - MetaMask
+        
+    - WalletConnect
+        
+    - Other EVM-compatible wallets
+        
+- Real-time trading dashboard
+    
+- Analytics and portfolio visualization UI
+    
 
-KYC/AML integration and identity verification
-Multi-factor risk scoring algorithms
-Configurable transaction approval workflows
+> [!note]  
+> This layer focuses purely on UX/UI and user interaction, with no business logic.
 
-4. Execution Layer
-Core financial operations engines:
+---
 
-Trade Execution Engine: Order matching and execution
-Index Allocation Engine: Automated portfolio rebalancing
-Lending & Collateral Engine: Loan origination and management
+## 2. Backend API Layer
 
-5. Blockchain Integration Layer
-Middleware connecting traditional backend to blockchain:
+**Purpose:** Secure communication and orchestration layer
 
-Smart contract interaction adapters
-ethers.js integration for Ethereum compatibility
-Comprehensive audit logging and event tracking
+- RESTful API services
+    
+- OpenAPI / Swagger documented endpoints
+    
+- JWT-based authentication and authorization
+    
+- Rate limiting and request throttling
+    
+- Input validation and schema enforcement
+    
 
-6. Blockchain & Settlement Layer
-On-chain infrastructure for final settlement:
+> [!important]  
+> Acts as the gateway between clients and internal services.
 
-Non-custodial smart contract vaults
-Collateral management contracts
-Multi-chain support (Ethereum, Polygon, Arbitrum)
+---
+
+## 3. Risk & Policy Engine
+
+**Purpose:** Compliance-first automated risk management
+
+- KYC / AML integration
+    
+- Identity verification workflows
+    
+- Multi-factor risk scoring algorithms
+    
+- Configurable transaction approval rules
+    
+- Policy-based enforcement engine
+    
+
+> [!warning]  
+> This layer determines whether a transaction is allowed before execution.
+
+---
+
+## 4. Execution Layer
+
+**Purpose:** Core financial operations and business logic
+
+### Components
+
+- **Trade Execution Engine**
+    
+    - Order matching
+        
+    - Trade execution
+        
+- **Index Allocation Engine**
+    
+    - Automated portfolio rebalancing
+        
+    - Index weight calculations
+        
+- **Lending & Collateral Engine**
+    
+    - Loan origination
+        
+    - Collateral management
+        
+    - Liquidation logic
+        
+
+> [!tip]  
+> This layer is chain-agnostic and focuses purely on financial logic.
+
+---
+
+## 5. Blockchain Integration Layer
+
+**Purpose:** Bridge between backend services and blockchain networks
+
+- Smart contract interaction adapters
+    
+- ethers.js integration for Ethereum compatibility
+    
+- Transaction signing and submission
+    
+- Event listeners and indexers
+    
+- Comprehensive audit logging
+    
+
+> [!abstract]  
+> This layer abstracts blockchain complexity from core services.
+
+---
+
+## 6. Blockchain & Settlement Layer
+
+**Purpose:** On-chain settlement and custody
+
+- Non-custodial smart contract vaults
+    
+- On-chain collateral management
+    
+- Settlement finality
+    
+- Multi-chain support:
+    
+    - Ethereum
+        
+    - Polygon
+        
+    - Arbitrum
+        
+
+> [!success]  
+> Ensures trustless settlement and transparency.
+
+---
+
+## Architecture Flow (High-Level)
+
+```text
+Presentation Layer
+        ↓
+Backend API Layer
+        ↓
+Risk & Policy Engine
+        ↓
+Execution Layer
+        ↓
+Blockchain Integration Layer
+        ↓
+Blockchain & Settlement Layer
+```
+
 
 ---
 
